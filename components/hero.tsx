@@ -1,12 +1,33 @@
 "use client"
 
 import { ChevronDown } from "lucide-react"
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState, useCallback } from "react"
 import Image from "next/image"
 
+const heroImages = [
+  {
+    src: "/images/hero-celebration.jpg",
+    alt: "Sheffield United team celebration"
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-akV4LAeTv8lCqNzBofHtmPhEgr2Vjl.png",
+    alt: "Sheffield United players celebrating goal"
+  }
+]
+
 export function Hero() {
+  const [currentSlide, setCurrentSlide] = useState(0)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const heroRef = useRef<HTMLElement>(null)
+
+  // Auto-advance slides
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length)
+    }, 8000) // Change slide every 8 seconds
+
+    return () => clearInterval(interval)
+  }, [])
 
   // Subtle parallax effect on mouse move
   useEffect(() => {
@@ -28,6 +49,10 @@ export function Hero() {
       aboutSection.scrollIntoView({ behavior: "smooth" })
     }
   }
+
+  const goToSlide = useCallback((index: number) => {
+    setCurrentSlide(index)
+  }, [])
 
   return (
     <section ref={heroRef} className="relative h-screen w-full overflow-hidden">
@@ -52,23 +77,35 @@ export function Hero() {
 
       {/* Background with Ken Burns effect and parallax */}
       <div className="absolute inset-0 bg-[#181434] overflow-hidden">
-        <div 
-          className="absolute inset-[-20px] animate-ken-burns"
-          style={{
-            transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
-            transition: 'transform 0.5s ease-out',
-          }}
-        >
-          <Image
-            src="/images/hero-celebration.jpg"
-            alt="Football celebration"
-            fill
-            priority
-            quality={75}
-            className="object-cover object-center"
-            sizes="100vw"
-          />
-        </div>
+        {heroImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-[-20px] transition-opacity duration-1500 ease-in-out ${
+              index === currentSlide ? 'opacity-100' : 'opacity-0'
+            }`}
+            style={{
+              transitionDuration: '1500ms',
+            }}
+          >
+            <div 
+              className="absolute inset-0 animate-ken-burns"
+              style={{
+                transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
+                transition: 'transform 0.5s ease-out',
+              }}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                priority={index === 0}
+                quality={75}
+                className="object-cover object-center"
+                sizes="100vw"
+              />
+            </div>
+          </div>
+        ))}
         
         {/* Gradient overlays for depth */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#181434]/40 via-transparent to-[#181434]/50" />
@@ -81,6 +118,22 @@ export function Hero() {
             background: 'radial-gradient(ellipse at center, transparent 0%, transparent 50%, rgba(24, 20, 52, 0.3) 100%)',
           }}
         />
+      </div>
+
+      {/* Slide Indicators */}
+      <div className="absolute bottom-24 left-1/2 z-10 -translate-x-1/2 flex gap-3">
+        {heroImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`h-1.5 rounded-full transition-all duration-500 ${
+              index === currentSlide 
+                ? 'w-8 bg-white' 
+                : 'w-1.5 bg-white/50 hover:bg-white/70'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
 
       {/* Scroll Down Arrow */}
