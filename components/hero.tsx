@@ -1,7 +1,7 @@
 "use client"
 
 import { ChevronDown } from "lucide-react"
-import { useEffect, useRef, useState, useCallback } from "react"
+import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 
 const heroImages = [
@@ -49,10 +49,6 @@ export function Hero() {
       aboutSection.scrollIntoView({ behavior: "smooth" })
     }
   }
-
-  const goToSlide = useCallback((index: number) => {
-    setCurrentSlide(index)
-  }, [])
 
   return (
     <section ref={heroRef} className="relative h-screen w-full overflow-hidden">
@@ -118,22 +114,6 @@ export function Hero() {
             background: 'radial-gradient(ellipse at center, transparent 0%, transparent 50%, rgba(24, 20, 52, 0.3) 100%)',
           }}
         />
-      </div>
-
-      {/* Slide Indicators */}
-      <div className="absolute bottom-24 left-1/2 z-10 -translate-x-1/2 flex gap-3">
-        {heroImages.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`h-1.5 rounded-full transition-all duration-500 ${
-              index === currentSlide 
-                ? 'w-8 bg-white' 
-                : 'w-1.5 bg-white/50 hover:bg-white/70'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
       </div>
 
       {/* Scroll Down Arrow */}
