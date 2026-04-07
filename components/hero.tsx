@@ -52,22 +52,34 @@ export function Hero() {
 
   return (
     <section ref={heroRef} className="relative h-screen w-full overflow-hidden">
-      {/* CSS for Ken Burns animation */}
+      {/* CSS for Live Photo animation - subtle breathing/floating effect */}
       <style jsx global>{`
-        @keyframes ken-burns {
-          0% {
-            transform: scale(1) translate(0%, 0%);
+        @keyframes live-photo {
+          0%, 100% {
+            transform: scale(1.02) translate(0%, 0%);
+          }
+          25% {
+            transform: scale(1.025) translate(0.15%, 0.1%);
           }
           50% {
-            transform: scale(1.06) translate(-0.5%, -0.3%);
+            transform: scale(1.03) translate(0%, 0.15%);
           }
-          100% {
-            transform: scale(1) translate(0%, 0%);
+          75% {
+            transform: scale(1.025) translate(-0.15%, 0.05%);
           }
         }
         
-        .animate-ken-burns {
-          animation: ken-burns 25s ease-in-out infinite;
+        @keyframes subtle-pulse {
+          0%, 100% {
+            filter: brightness(1) contrast(1);
+          }
+          50% {
+            filter: brightness(1.02) contrast(1.01);
+          }
+        }
+        
+        .animate-live-photo {
+          animation: live-photo 8s ease-in-out infinite, subtle-pulse 4s ease-in-out infinite;
         }
       `}</style>
 
@@ -84,7 +96,7 @@ export function Hero() {
             }}
           >
             <div 
-              className="absolute inset-0 animate-ken-burns"
+              className="absolute inset-0 animate-live-photo"
               style={{
                 transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
                 transition: 'transform 0.5s ease-out',
