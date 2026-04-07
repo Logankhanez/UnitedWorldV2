@@ -60,7 +60,7 @@ export function Hero() {
           }}
         >
           <Image
-            src="/images/hero-celebration.jpg"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dotqaWwBGEk1TMAG93ej6LHhpQFgYO.png"
             alt="Football celebration"
             fill
             priority
