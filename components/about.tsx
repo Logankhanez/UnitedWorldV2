@@ -20,6 +20,10 @@ const carouselImages = [
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-C4m69Su3kDge0NjnNyb1xmSlp0cj5C.png",
     alt: "United Academy"
   },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-eeapgQRhlvjmXtzZ4uAWC3AkwziZ6a.png",
+    alt: "Sheffield United Celebration"
+  },
 ]
 
 export function About() {
