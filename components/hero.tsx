@@ -9,10 +9,24 @@ export function Hero() {
   useEffect(() => {
     const video = videoRef.current
     if (!video) return
+
     video.muted = true
-    video.play().catch(() => {
-      // Silently handle autoplay block
-    })
+    video.defaultMuted = true
+    video.setAttribute('muted', '')
+    video.setAttribute('playsinline', '')
+    video.setAttribute('webkit-playsinline', '')
+
+    const attemptPlay = () => {
+      video.play().catch(() => {})
+    }
+
+    video.load()
+    video.addEventListener('canplay', attemptPlay, { once: true })
+    attemptPlay()
+
+    return () => {
+      video.removeEventListener('canplay', attemptPlay)
+    }
   }, [])
 
   const scrollToAbout = () => {
@@ -33,10 +47,11 @@ export function Hero() {
           loop
           playsInline
           disablePictureInPicture
-          x-webkit-airplay="deny"
-          controlsList="nodownload nofullscreen noremoteplayback"
+          preload="auto"
           className="absolute inset-0 h-full w-full object-cover"
           style={{ pointerEvents: 'none' }}
+          // @ts-ignore
+          webkit-playsinline="true"
         >
           <source
             src="https://res.cloudinary.com/dfegvdqlh/video/upload/v1776152644/United_World_-_2_-_HD_1080p_xhgxoc.mp4"
