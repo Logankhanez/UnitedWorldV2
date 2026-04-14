@@ -1,8 +1,20 @@
 'use client'
 
 import { ChevronDown } from 'lucide-react'
+import { useEffect, useRef } from 'react'
 
 export function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+    video.muted = true
+    video.play().catch(() => {
+      // Silently handle autoplay block
+    })
+  }, [])
+
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about')
     if (aboutSection) {
@@ -15,11 +27,16 @@ export function Hero() {
       {/* Video background */}
       <div className="absolute inset-0 bg-[#181434]">
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
+          disablePictureInPicture
+          x-webkit-airplay="deny"
+          controlsList="nodownload nofullscreen noremoteplayback"
           className="absolute inset-0 h-full w-full object-cover"
+          style={{ pointerEvents: 'none' }}
         >
           <source
             src="https://res.cloudinary.com/dfegvdqlh/video/upload/v1776150859/United_World_-_1_-_HD_1080p_pmjavb.mov"
