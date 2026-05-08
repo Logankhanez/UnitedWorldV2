@@ -61,7 +61,7 @@ export function Stats() {
                 index < stats.length - 1 ? "md:border-r md:border-[#181434]/20" : ""
               }`}
             >
-              <div className="font-serif text-5xl font-light italic text-[#181434] md:text-6xl lg:text-7xl">
+              <div className="font-serif text-3xl font-light italic text-[#181434] sm:text-4xl md:text-5xl lg:text-6xl">
                 {stat.value.includes("$") ? (
                   <>
                     $<CountUpNumber value={500} isVisible={isVisible} />M

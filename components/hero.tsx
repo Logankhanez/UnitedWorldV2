@@ -48,8 +48,8 @@ export function Hero() {
           playsInline
           disablePictureInPicture
           preload="auto"
-          className="absolute inset-0 h-full w-full object-cover"
-          style={{ pointerEvents: 'none' }}
+          className="absolute inset-0 h-full w-full object-cover md:object-center"
+          style={{ pointerEvents: 'none', objectPosition: 'center 40%' }}
           // @ts-ignore
           webkit-playsinline="true"
         >
