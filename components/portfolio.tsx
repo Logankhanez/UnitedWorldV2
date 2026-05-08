@@ -61,7 +61,7 @@ export function Portfolio() {
   return (
     <section id="portfolio" className="bg-white py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="font-serif text-4xl font-normal text-[#181434] md:text-5xl">
+        <h2 className="font-serif text-2xl font-normal text-[#181434] sm:text-3xl md:text-4xl lg:text-5xl">
           Portfolio
         </h2>
         <div className="mt-4 h-1 w-16 bg-[#181434]" />
