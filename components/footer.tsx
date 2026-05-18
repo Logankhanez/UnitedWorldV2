@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { MapPin, Phone } from "lucide-react"
+import { MapPin, Phone, Mail } from "lucide-react"
 
 const footerLinks = [
   { label: "About", href: "/about" },
@@ -16,7 +16,7 @@ export function Footer() {
       {/* Main Footer */}
       <div className="mx-auto max-w-7xl px-6 py-4 lg:px-8">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-          {/* Logo + Email centered below */}
+          {/* Logo - Gauche */}
           <div className="flex flex-col items-center lg:items-start">
             <Link href="/" className="inline-block">
               <Image
@@ -27,13 +27,10 @@ export function Footer() {
                 className="h-auto w-[168px] lg:w-[192px]"
               />
             </Link>
-            <a href="mailto:ir@unitedworld.ch" className="text-white/80 text-[10px] hover:text-white transition-colors mt-2">
-              ir@unitedworld.ch
-            </a>
           </div>
 
-          {/* Address */}
-          <div className="flex items-start gap-2">
+          {/* Adresse postale - Milieu */}
+          <div className="flex items-start gap-2 justify-center">
             <MapPin className="h-3 w-3 flex-shrink-0 mt-0.5 text-white/70" />
             <div className="text-white/80 text-[10px] leading-relaxed">
               <p>Chemin du Pavillon 5</p>
@@ -42,12 +39,20 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Phone */}
-          <div className="flex items-center gap-2">
-            <Phone className="h-3 w-3 text-white/70" />
-            <a href="tel:+41225474949" className="text-white/80 text-[10px] hover:text-white transition-colors">
-              +41 22 547 49 49
-            </a>
+          {/* Numero + Email - Droite */}
+          <div className="flex flex-col items-center lg:items-end gap-1">
+            <div className="flex items-center gap-2">
+              <Phone className="h-3 w-3 text-white/70" />
+              <a href="tel:+41225474949" className="text-white/80 text-[10px] hover:text-white transition-colors">
+                +41 22 547 49 49
+              </a>
+            </div>
+            <div className="flex items-center gap-2">
+              <Mail className="h-3 w-3 text-white/70" />
+              <a href="mailto:ir@unitedworld.ch" className="text-white/80 text-[10px] hover:text-white transition-colors">
+                ir@unitedworld.ch
+              </a>
+            </div>
           </div>
         </div>
       </div>
