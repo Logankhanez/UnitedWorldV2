@@ -44,7 +44,7 @@ export function Navbar() {
             className="h-auto w-[150px] lg:w-[192px]"
             priority
           />
-          <span className="text-[#E8B98A] text-[8px] lg:text-[10px] tracking-wide -mt-2">
+          <span className="text-[#E8B98A] text-[8px] lg:text-[10px] tracking-wide -mt-4">
             ir@unitedworld.ch
           </span>
         </Link>
