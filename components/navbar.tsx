@@ -33,9 +33,9 @@ export function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex h-10 max-w-7xl items-center justify-between px-6 lg:px-8">
+      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
         {/* Logo + Email */}
-        <Link href="/" className="flex flex-col items-center -my-4">
+        <Link href="/" className="flex flex-col items-center">
           <Image
             src="/images/united-world-logo.png"
             alt="United World"
@@ -44,7 +44,7 @@ export function Navbar() {
             className="h-auto w-[150px] lg:w-[192px]"
             priority
           />
-          <span className="text-[#E8B98A] text-[8px] lg:text-[10px] tracking-wide -mt-9">
+          <span className="text-[#E8B98A] text-[8px] lg:text-[10px] tracking-wide -mt-2">
             ir@unitedworld.ch
           </span>
         </Link>
