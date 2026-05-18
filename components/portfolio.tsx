@@ -5,7 +5,7 @@ import Link from "next/link"
 
 // Portfolio items
 const portfolioItems = [
-  { name: "Hiva", logo: "/images/hiva-logo.png", description: "Sports Marketing Agency in Saudi Arabia", website: null },
+  { name: "Hiva", logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Capture%20d%E2%80%99e%CC%81cran%202026-05-18%20a%CC%80%2011.37.30-XuwVAGsKJJ9pZaftws7fFpok7esliv.png", description: "Sports Marketing Agency in Saudi Arabia", website: null },
   { name: "USPBL", logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Te0ieidN8hIYAEBmpeXGoV79RlcuD3.png", description: "United Shore Professional Baseball League", website: "https://uspbl.com/" },
   { name: "DoubleTree by Hilton", logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6DFS7licGcEMbuM2oHhCbU5wQuDYY2.png", description: "Hilton DoubleTree Sheffield City", website: "https://www.hilton.com/en/hotels/dsasddi-doubletree-sheffield-city/" },
   { name: "Sheffield United", logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-z5AQFSVvE35gBDJ4Cuer4qZb05YzaE.png", description: "English Football Club", website: "https://www.sufc.co.uk/" },
