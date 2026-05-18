@@ -5,9 +5,9 @@ import Link from "next/link"
 
 // Portfolio items
 const portfolioItems = [
+  { name: "Hiva", logo: "/images/hiva-logo.png", description: "Sports Marketing Agency in Saudi Arabia", website: null },
   { name: "USPBL", logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Te0ieidN8hIYAEBmpeXGoV79RlcuD3.png", description: "United Shore Professional Baseball League", website: "https://uspbl.com/" },
   { name: "DoubleTree by Hilton", logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6DFS7licGcEMbuM2oHhCbU5wQuDYY2.png", description: "Hilton DoubleTree Sheffield City", website: "https://www.hilton.com/en/hotels/dsasddi-doubletree-sheffield-city/" },
-  { name: "Hiva", logo: null, description: "Sports Marketing Agency in Saudi Arabia", website: null },
   { name: "Sheffield United", logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-z5AQFSVvE35gBDJ4Cuer4qZb05YzaE.png", description: "English Football Club", website: "https://www.sufc.co.uk/" },
   { name: "Beerschot", logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ED0PSUBUnjlaeEO3CABU0Hlh9ukKgl.png", description: "Belgian Football Club", website: "https://www.beerschot.be/nl/index.php" },
   { name: "Châteauroux", logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8Qdc3jUa4WTnOTsHKlglG0347CSma8.png", description: "French Football Club", website: "https://www.berrichonne.net/accueil.html" },

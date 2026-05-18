@@ -16,21 +16,21 @@ export function Footer() {
       {/* Main Footer */}
       <div className="mx-auto max-w-7xl px-6 py-4 lg:px-8">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-          {/* Logo */}
-          <div>
+          {/* Logo - Gauche */}
+          <div className="flex flex-col items-center lg:items-start">
             <Link href="/" className="inline-block">
               <Image
                 src="/images/united-world-logo.png"
                 alt="United World"
-                width={160}
-                height={36}
-                className="h-auto w-[140px] lg:w-[160px]"
+                width={192}
+                height={43}
+                className="h-auto w-[168px] lg:w-[192px]"
               />
             </Link>
           </div>
 
-          {/* Address */}
-          <div className="flex items-start gap-2">
+          {/* Adresse postale - Milieu */}
+          <div className="flex items-start gap-2 justify-center">
             <MapPin className="h-3 w-3 flex-shrink-0 mt-0.5 text-white/70" />
             <div className="text-white/80 text-[10px] leading-relaxed">
               <p>Chemin du Pavillon 5</p>
@@ -39,8 +39,8 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Contact */}
-          <div className="space-y-1">
+          {/* Numero + Email - Droite */}
+          <div className="flex flex-col items-center lg:items-end gap-1">
             <div className="flex items-center gap-2">
               <Phone className="h-3 w-3 text-white/70" />
               <a href="tel:+41225474949" className="text-white/80 text-[10px] hover:text-white transition-colors">
@@ -49,7 +49,7 @@ export function Footer() {
             </div>
             <div className="flex items-center gap-2">
               <Mail className="h-3 w-3 text-white/70" />
-              <a href="mailto:info@unitedworld.ch" className="text-white/80 text-[10px] hover:text-white transition-colors">
+              <a href="mailto:ir@unitedworld.ch" className="text-white/80 text-[10px] hover:text-white transition-colors">
                 ir@unitedworld.ch
               </a>
             </div>
