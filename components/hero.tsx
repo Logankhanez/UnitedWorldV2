@@ -58,18 +58,6 @@ export function Hero() {
             type="video/mp4"
           />
         </video>
-
-        {/* Gradient overlays for depth */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#181434]/40 via-transparent to-[#181434]/50 pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#181434]/20 via-transparent to-[#181434]/20 pointer-events-none" />
-
-        {/* Vignette */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background: 'radial-gradient(ellipse at center, transparent 0%, transparent 50%, rgba(24, 20, 52, 0.3) 100%)',
-          }}
-        />
       </div>
 
       {/* Scroll Down Arrow */}
