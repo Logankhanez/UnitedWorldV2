@@ -4,7 +4,7 @@ export function ContactHero() {
       {/* Background */}
       <div className="absolute inset-0 bg-[#181434]">
         <img
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-nhHLsKZytTuZijrGv4rEGN9LsSo13w.png"
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-EO4JuFNNL0oNgRVVRzTsUk5CNADQhF.png"
           alt="Contact United World"
           className="h-full w-full object-cover opacity-70"
         />
