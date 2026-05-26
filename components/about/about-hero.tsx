@@ -1,8 +1,8 @@
 export function AboutHero() {
   return (
-    <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center">
+    <section className="relative h-[75vh] min-h-[550px] flex items-center justify-center">
       {/* Background */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0">
         <img
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-QZTbZinsCtDpqNlxKdnQhs8fGskKux.png"
           alt="About United World"
