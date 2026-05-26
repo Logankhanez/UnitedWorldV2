@@ -9,7 +9,7 @@ const carouselImages = [
     alt: "Sheffield United"
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/8527903abcce0dcee8604acea576b1ce-uHNFtWVsdEpj3gLQGJluto4vSZeF0w.jpg",
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/8c017485bf5945a4d554be5268549fd3-8f3IXuliiqnkjy2XqE6Hd4cOPfkhIq.jpg",
     alt: "Beerschot"
   },
   {
