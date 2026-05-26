@@ -5,24 +5,16 @@ import { useState, useEffect } from "react"
 
 const carouselImages = [
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-bybq6TNKfHPHHlX6GcA2nTACYadeDx.png",
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kvJtEqcDulweUMKD7pn9LAtHtcGgPi.png",
     alt: "Sheffield United"
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image.png-t911pUP6S1Qk5NnzlJAUck1oZd3twj.jpeg",
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/8527903abcce0dcee8604acea576b1ce-uHNFtWVsdEpj3gLQGJluto4vSZeF0w.jpg",
     alt: "Beerschot"
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/collage-2022-07-11T20_52_08.387Z-alBT2jd8XWP5of6TrMG009CtTq77kE.jpg",
-    alt: "Châteauroux"
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-C4m69Su3kDge0NjnNyb1xmSlp0cj5C.png",
-    alt: "United Academy"
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-eeapgQRhlvjmXtzZ4uAWC3AkwziZ6a.png",
-    alt: "Sheffield United Celebration"
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-JyMlZH82WRoKbV8G57FB9aIOFpjDcM.png",
+    alt: "La Berrichonne de Châteauroux"
   },
 ]
 
