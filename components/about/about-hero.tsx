@@ -1,6 +1,6 @@
 export function AboutHero() {
   return (
-    <section className="relative h-[75vh] min-h-[550px] flex items-center justify-center">
+    <section className="relative h-[90vh] min-h-[650px] flex items-center justify-center">
       {/* Background */}
       <div className="absolute inset-0">
         <img
