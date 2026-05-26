@@ -85,7 +85,7 @@ export function Portfolio() {
               <CardWrapper
                 key={`${item.name}-${index}`}
                 {...cardProps}
-                className="group flex h-40 w-56 md:h-48 md:w-72 flex-shrink-0 flex-col items-center justify-center border-2 border-gray-200 bg-white p-4 md:p-6 transition-all duration-300 cursor-pointer hover:-translate-y-2 hover:shadow-2xl hover:border-[#181434] hover:bg-[#181434]"
+                className="group flex h-40 w-56 md:h-48 md:w-72 flex-shrink-0 flex-col items-center justify-center bg-white p-4 md:p-6 transition-all duration-300 cursor-pointer hover:-translate-y-2 hover:shadow-2xl hover:bg-[#181434]"
               >
                 {item.logo ? (
                   <img
@@ -98,7 +98,6 @@ export function Portfolio() {
                 )}
                 <div className="mt-4 text-center">
                   <div className="text-sm font-medium text-[#181434] transition-colors duration-300 group-hover:text-[#B8860B]">{item.name}</div>
-                  <div className="mt-1 text-xs text-gray-500 transition-colors duration-300 group-hover:text-white/70">{item.description}</div>
                 </div>
               </CardWrapper>
             )

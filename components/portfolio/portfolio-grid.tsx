@@ -34,7 +34,7 @@ const companies = [
     name: "Hiva", 
     category: "Current", 
     filter: "current", 
-    logo: null,
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Capture%20d%E2%80%99e%CC%81cran%202026-05-18%20a%CC%80%2011.37.30-XuwVAGsKJJ9pZaftws7fFpok7esliv.png",
     description: "Sports Marketing Agency in Saudi Arabia",
     website: null
   },
