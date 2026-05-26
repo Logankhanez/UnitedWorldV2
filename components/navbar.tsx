@@ -34,7 +34,7 @@ export function Navbar() {
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
-        {/* Logo + Email */}
+        {/* Logo */}
         <Link href="/" className="flex flex-col items-center -mt-6">
           <Image
             src="/images/united-world-logo.png"
@@ -44,9 +44,6 @@ export function Navbar() {
             className="h-auto w-[150px] lg:w-[192px]"
             priority
           />
-          <span className="text-[#E8B98A] text-[8px] lg:text-[10px] tracking-wide -mt-9">
-            ir@unitedworld.ch
-          </span>
         </Link>
 
         {/* Desktop Navigation */}
