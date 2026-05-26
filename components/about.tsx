@@ -16,6 +16,10 @@ const carouselImages = [
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-JyMlZH82WRoKbV8G57FB9aIOFpjDcM.png",
     alt: "La Berrichonne de Châteauroux"
   },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-lrIHuLq3NbRQqVdJDDTkdBVCy6QWPc.png",
+    alt: "USPBL"
+  },
 ]
 
 export function About() {
