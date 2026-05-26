@@ -35,7 +35,7 @@ export function Navbar() {
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
         {/* Logo */}
-        <Link href="/" className="flex flex-col items-center -mt-6">
+        <Link href="/" className="flex flex-col items-center -mt-3">
           <Image
             src="/images/united-world-logo.png"
             alt="United World"
@@ -47,7 +47,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-6 -mt-3">
           {navItems.map((item) => (
             <Link
               key={item.label}
