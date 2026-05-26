@@ -127,7 +127,7 @@ export function PortfolioGrid() {
                 className="group cursor-pointer block transition-all duration-300 hover:-translate-y-2"
               >
                 {/* Logo Container */}
-                <div className="h-[200px] w-full border-2 border-gray-200 bg-white flex items-center justify-center p-8 transition-all duration-300 group-hover:shadow-2xl group-hover:border-[#181434] group-hover:bg-[#181434]">
+                <div className="h-[200px] w-full bg-white flex items-center justify-center p-8 transition-all duration-300 group-hover:shadow-2xl group-hover:bg-[#181434]">
                   {company.logo ? (
                     <img
                       src={company.logo || "/placeholder.svg"}
@@ -144,9 +144,6 @@ export function PortfolioGrid() {
                   <h3 className="text-lg font-serif text-[#181434] group-hover:text-[#B8860B] transition-colors duration-300">
                     {company.name}
                   </h3>
-                  <p className="text-sm text-gray-500 mt-1">
-                    {company.description}
-                  </p>
                 </div>
               </CardWrapper>
             )
