@@ -7,6 +7,7 @@ export function AboutHero() {
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-QZTbZinsCtDpqNlxKdnQhs8fGskKux.png"
           alt="About United World"
           className="h-full w-full object-cover opacity-95"
+          style={{ objectPosition: 'center 80%' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#181434]/20 via-transparent to-[#181434]/30" />
       </div>
