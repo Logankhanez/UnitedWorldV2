@@ -39,7 +39,7 @@ export function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Video background */}
-      <div className="absolute inset-0 bg-[#181434]">
+      <div className="absolute inset-0 bg-black">
         <video
           ref={videoRef}
           autoPlay
@@ -49,7 +49,7 @@ export function Hero() {
           disablePictureInPicture
           preload="auto"
           className="absolute inset-0 h-full w-full object-cover md:object-center"
-          style={{ pointerEvents: 'none', objectPosition: 'center 40%' }}
+          style={{ pointerEvents: 'none', objectPosition: 'center 40%', backgroundColor: 'black' }}
           // @ts-ignore
           webkit-playsinline="true"
         >
